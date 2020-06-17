@@ -50,6 +50,29 @@ function currentTime() {
 
     });
   });
+// Add element with eneter
+        $(document).on('keypress', function(e) {
+            var vrednost = $('.new-to-do').val();
+            if (e.which == 13) {
+                if (vrednost) {
+                  var newValue = `<div class="add-to-do">
+                  <div class="select">
+                      <input type="checkbox" class="checkboxToDo">
+                  </div>
+                  <div class="textToDo">${vrednost}</div>
+                  <div class="remove"><i class="fas fa-trash-alt"></i></div>
+                   </div>`;
+
+              $('.toDoBody').append(newValue);
+              $('.new-to-do').val('');
+              $('.new-to-do').attr("placeholder", "Add a task...");
+                }else{
+                  $('.new-to-do').val();
+                  $('.new-to-do').attr("placeholder", "Can't be blank...");
+                }
+
+            }
+        });
 
 // $(document).on('click','.setings',function(){
 //   $( ".small-modal" ).slideDown( "slow", function() {
