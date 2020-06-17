@@ -149,3 +149,10 @@ button:focus {outline:0;}
 
     }
   }
+
+  @media only screen and (max-width: 720px) {
+    .new-to-do {
+        width: 89%;
+
+    }
+  }
