@@ -143,4 +143,9 @@ button:focus {outline:0;}
     .to-do-block{
         width: 96%;
     }
+
+    .new-to-do {
+        width: 89%;
+
+    }
   }
